@@ -1,3 +1,3 @@
-package com.conrradocamacho.com.conrradocamacho.alugames.model
+package com.conrradocamacho.alugames.model
 
-data class InfoApiShark(val title: String, val thumb: String)
+data class InfoSharkApi(val title: String, val thumb: String)

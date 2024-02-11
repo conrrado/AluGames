@@ -1,56 +1,84 @@
-package com.conrradocamacho
+package com.conrradocamacho.alugames.main
 
-import com.google.gson.Gson
-import java.net.URI
-import java.net.http.HttpClient
-import java.net.http.HttpRequest
-import java.net.http.HttpResponse.BodyHandlers
-import java.util.Scanner
+import com.conrradocamacho.alugames.services.SharkApi
+import com.conrradocamacho.alugames.model.Game
+import com.conrradocamacho.alugames.model.Gamer
+import com.conrradocamacho.alugames.util.birthdayToAge
+import java.util.*
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val reader = Scanner(System.`in`)
-    println("Type a game code to search: ")
-    val search = reader.nextLine()
+    val gamer = Gamer.createGamer(reader)
+    println("Registration completed successfully! Gamer's data: ")
+    println(gamer)
+    println("Games Age: " + gamer.birthday?.birthdayToAge())
 
-    val address = "https://www.cheapshark.com/api/1.0/games?id=$search"
+    do {
+        println("Type a game code to search: ")
+        val search = reader.nextLine()
 
-    val client: HttpClient = HttpClient.newHttpClient()
-    val request = HttpRequest.newBuilder()
-        .uri(URI.create(address))
-        .build()
-    val response = client.send(request, BodyHandlers.ofString())
+        var myGame: Game? = null
 
-    val json = response.body()
+        val result = runCatching {
+            val searchApi = SharkApi()
+            val gameInfo = searchApi.searchGame(search)
 
-    val gson = Gson()
-
-    var myGame: Game? = null
-
-    val result = runCatching {
-        val myInfoGame = gson.fromJson(json, GameInfo::class.java)
-        myGame = Game(myInfoGame.info.title, myInfoGame.info.thumb)
-    }
-
-    result.onFailure {
-        println("Ops, game not exist, try another id")
-    }
-
-    result.onSuccess {
-        println("Would you type a custom description? yes/no")
-        val option = reader.nextLine()
-        if (option.equals("yes", true)) {
-            println("Type the custom description for the game: ")
-            val customDescription = reader.nextLine()
-            myGame?.description = customDescription
-        } else {
-            myGame?.description = myGame?.title
+            myGame = Game(gameInfo.info.title, gameInfo.info.thumb)
         }
-        println(myGame)
+
+        result.onFailure {
+            println("Ops, game not exist, try another id")
+        }
+
+        result.onSuccess {
+            println("Would you type a custom description? yes/no")
+            val option = reader.nextLine()
+            if (option.equals("yes", true)) {
+                println("Type the custom description for the game: ")
+                val customDescription = reader.nextLine()
+                myGame?.description = customDescription
+            } else {
+                myGame?.description = myGame?.title
+            }
+
+            gamer.gamesSearched.add(myGame)
+        }
+
+        println("Would you want search a new game? yes/no")
+        val answer = reader.nextLine()
+    } while (answer.equals("yes", true))
+
+    println("Games searched:")
+    println(gamer.gamesSearched)
+
+    println("\nGames ordered by title: ")
+    gamer.gamesSearched.sortBy {
+        it?.title
     }
 
-    result.onSuccess {
-        println("Busca finalizada com sucesso!")
+    gamer.gamesSearched.forEach {
+        println("Title: " + it?.title)
     }
+
+    val gamesFiltered = gamer.gamesSearched.filter {
+        it?.title?.contains("batman", true) ?: false
+    }
+    println("\nGames filtered: ")
+    println(gamesFiltered)
+
+    println("Would you like remove any game of the list? (yes/no)")
+    val chooseRemove = reader.nextLine()
+    if (chooseRemove.equals("yes", true)) {
+        println(gamer.gamesSearched)
+        println("\nType the game position:")
+        val position = reader.nextInt()
+        gamer.gamesSearched.removeAt(position)
+    }
+
+    println("\nList updated")
+    println(gamer.gamesSearched)
+
+    println("Busca finalizada com sucesso!")
 }
