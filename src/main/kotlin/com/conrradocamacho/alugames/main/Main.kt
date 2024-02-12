@@ -1,6 +1,6 @@
 package com.conrradocamacho.alugames.main
 
-import com.conrradocamacho.alugames.services.SharkApi
+import com.conrradocamacho.alugames.services.ConsumeApi
 import com.conrradocamacho.alugames.model.Game
 import com.conrradocamacho.alugames.model.Gamer
 import com.conrradocamacho.alugames.util.birthdayToAge
@@ -22,8 +22,8 @@ fun main() {
         var myGame: Game? = null
 
         val result = runCatching {
-            val searchApi = SharkApi()
-            val gameInfo = searchApi.searchGame(search)
+            val searchApi = ConsumeApi()
+            val gameInfo = searchApi.searchGameById(search)
 
             myGame = Game(gameInfo.info.title, gameInfo.info.thumb)
         }

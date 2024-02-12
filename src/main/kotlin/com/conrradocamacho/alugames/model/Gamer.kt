@@ -1,5 +1,7 @@
 package com.conrradocamacho.alugames.model
 
+import java.time.LocalDate
+import java.time.Month
 import java.util.Scanner
 import kotlin.random.Random
 
@@ -15,6 +17,7 @@ data class Gamer(var name: String, var email: String) {
     var internalId: String? = null
         private set
     val gamesSearched = mutableListOf<Game?>()
+    val rentedGames = mutableListOf<Rental>()
 
     constructor(name: String, email: String, birthday: String, user: String):
             this(name, email) {
@@ -47,6 +50,29 @@ data class Gamer(var name: String, var email: String) {
             return email
         }
         throw IllegalArgumentException("Email invalid")
+    }
+
+    fun rentalGame(game: Game, rentalPeriod: RentalPeriod): Rental {
+        val rental = Rental(this, game, rentalPeriod)
+        rentedGames.add(rental)
+        return rental
+    }
+
+    fun getRentedGameListByMonth(month: Month): List<Game> {
+        val rentedGameListByMonth = mutableListOf<Rental>()
+        val gameListByMonth = mutableListOf<Game>()
+
+        rentedGames.forEach {
+            if (it.rentalPeriod.initialDate.month.equals(month)) {
+                rentedGameListByMonth.add(it)
+            }
+        }
+
+        rentedGameListByMonth.map {
+            gameListByMonth.add(it.game)
+        }
+
+        return gameListByMonth
     }
 
     companion object {
