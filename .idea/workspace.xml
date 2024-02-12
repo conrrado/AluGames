@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/InfoGameJson.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Rental.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/RentalPeriod.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GameExtension.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GamerExtension.kt" afterDir="false" />
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Plan.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SinglePlan.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SubscriptionPlan.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestJson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/services/SharkApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/services/ConsumeApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Rental.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Rental.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -128,6 +124,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706464485664</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games">
+      <option name="closed" value="true" />
+      <created>1707757432075</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707757432075</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games" />
   </component>
 </project>
