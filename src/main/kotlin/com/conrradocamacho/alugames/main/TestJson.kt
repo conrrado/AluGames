@@ -35,11 +35,18 @@ fun main() {
 //    println(gamerCaroline.getRentedGameListByMonth(LocalDate.now().month + 1))
 
     val gamerCamila = gamerList.get(5)
-    gamerCamila.plan = SubscriptionPlan("SILVER", 9.90, 3)
+    gamerCamila.plan = SubscriptionPlan("SILVER", 9.90, 3, 0.15)
     gamerCamila.rentalGame(gameResidentVillage, rentalPeriod1)
     gamerCamila.rentalGame(gameSpiderMan, rentalPeriod2)
     gamerCamila.rentalGame(gameTheLastOfUs, rentalPeriod3)
     gamerCamila.rentalGame(gameGodOfWar, rentalPeriod3)
+    println(gamerCamila.rentedGames)
 
+    gamerCamila.recommend(7)
+    gamerCamila.recommend(10)
+    gamerCamila.recommend(11)
+    println(gamerCamila)
+
+    gamerCamila.rentalGame(gameResidentVillage, rentalPeriod1)
     println(gamerCamila.rentedGames)
 }

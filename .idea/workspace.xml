@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Plan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SinglePlan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SubscriptionPlan.kt" afterDir="false" />
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add Plan functionality&#10;&#10;- Create Plan sealed class&#10;- Create SinglePlan class&#10;- Create SubscriptionPlan class&#10;- Create function to get price for each game&#10;- Create function to validate price according to plan of the user">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Recommendable.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestJson.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Rental.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Rental.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SinglePlan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SinglePlan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SubscriptionPlan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/SubscriptionPlan.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,7 @@
         <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -132,11 +132,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707757432075</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Plan functionality&#10;&#10;- Create Plan sealed class&#10;- Create SinglePlan class&#10;- Create SubscriptionPlan class&#10;- Create function to get price for each game&#10;- Create function to validate price according to plan of the user">
+      <option name="closed" value="true" />
+      <created>1707764645784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707764645784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Rental functionality&#10;&#10;- Create Rental class&#10;- Create Rental Period class&#10;- Create function to get rented games by month&#10;- Create function to store rented games" />
+    <MESSAGE value="Add Plan functionality&#10;&#10;- Create Plan sealed class&#10;- Create SinglePlan class&#10;- Create SubscriptionPlan class&#10;- Create function to get price for each game&#10;- Create function to validate price according to plan of the user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Plan functionality&#10;&#10;- Create Plan sealed class&#10;- Create SinglePlan class&#10;- Create SubscriptionPlan class&#10;- Create function to get price for each game&#10;- Create function to validate price according to plan of the user" />
   </component>
 </project>

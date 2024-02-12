@@ -5,7 +5,7 @@ import java.time.Month
 import java.util.Scanner
 import kotlin.random.Random
 
-data class Gamer(var name: String, var email: String) {
+data class Gamer(var name: String, var email: String): Recommendable {
     var birthday: String? = null
     var user: String? = null
         set(value) {
@@ -19,6 +19,18 @@ data class Gamer(var name: String, var email: String) {
     var plan: Plan = SinglePlan("BRONZE")
     val gamesSearched = mutableListOf<Game?>()
     val rentedGames = mutableListOf<Rental>()
+    private val gradeList = mutableListOf<Int>()
+
+    override val average: Double
+        get() = gradeList.average()
+
+    override fun recommend(grade: Int) {
+        if (grade in 1..10) {
+            gradeList.add(grade)
+        } else {
+            println("The grade value $grade not added, the value needed between 1 and 10")
+        }
+    }
 
     constructor(name: String, email: String, birthday: String, user: String):
             this(name, email) {
@@ -35,7 +47,13 @@ data class Gamer(var name: String, var email: String) {
     }
 
     override fun toString(): String {
-        return "Gamer(name='$name', email='$email', birthday=$birthday, user=$user, internalId=$internalId)"
+        return "Gamer:\n" +
+                "Name: $name\n" +
+                "Email: $email\n" +
+                "Birthday: $birthday\n" +
+                "User: $user\n" +
+                "InternalId: $internalId\n" +
+                "Reputation: $average"
     }
 
     private fun createInternalId() {
