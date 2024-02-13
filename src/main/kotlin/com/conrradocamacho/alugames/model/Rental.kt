@@ -1,5 +1,6 @@
 package com.conrradocamacho.alugames.model
 
+import java.math.BigDecimal
 import java.time.LocalDate
 import java.time.Period
 
@@ -7,7 +8,7 @@ data class Rental(
     val gamer: Gamer,
     val game: Game,
     val rentalPeriod: RentalPeriod) {
-    val rentalPrice: Double = gamer.plan.getPrice(this)
+    val rentalPrice: BigDecimal = gamer.plan.getPrice(this)
 
     override fun toString(): String {
         return "Rental of ${game.title} by ${gamer.name} for the price R$ $rentalPrice"

@@ -1,5 +1,6 @@
 package com.conrradocamacho.alugames.model
 
+import java.math.BigDecimal
 import java.math.RoundingMode
 import java.time.LocalDate
 import java.time.Month
@@ -23,8 +24,8 @@ data class Gamer(var name: String, var email: String): Recommendable {
     private val gradeList = mutableListOf<Int>()
     val recommendedGames = mutableListOf<Game>()
 
-    override val average: Double
-        get() = gradeList.average()
+    override val average: BigDecimal
+        get() = gradeList.takeIf { it.isNotEmpty() } ?.let { BigDecimal(it.average()) } ?: BigDecimal.ZERO
 
     override fun recommend(grade: Int) {
         if (grade in 1..10) {
@@ -60,7 +61,7 @@ data class Gamer(var name: String, var email: String): Recommendable {
                 "Birthday: $birthday\n" +
                 "User: $user\n" +
                 "InternalId: $internalId\n" +
-                "Reputation: ${average.toBigDecimal().setScale(2, RoundingMode.UP)}"
+                "Reputation: ${average.setScale(2, RoundingMode.UP)}"
     }
 
     private fun createInternalId() {

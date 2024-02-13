@@ -5,6 +5,7 @@ import com.conrradocamacho.alugames.model.SubscriptionPlan
 import com.conrradocamacho.alugames.services.ConsumeApi
 import com.google.gson.GsonBuilder
 import java.io.File
+import java.math.BigDecimal
 import java.time.LocalDate
 
 fun main() {
@@ -38,12 +39,12 @@ fun main() {
     gamerCaroline.rentalGame(gameSpiderMan, rentalPeriod2)
     gamerCaroline.rentalGame(gameTheLastOfUs, rentalPeriod3)
     gamerCaroline.rentalGame(gameGodOfWar, rentalPeriod4)
-//    println(gamerCaroline.rentedGames)
+    println(gamerCaroline.rentedGames)
 
-//    println(gamerCaroline.getRentedGameListByMonth(LocalDate.now().month + 1))
+    println(gamerCaroline.getRentedGameListByMonth(LocalDate.now().month + 1))
 
     val gamerCamila = gamerList.get(5)
-    gamerCamila.plan = SubscriptionPlan("SILVER", 9.90, 3, 0.15)
+    gamerCamila.plan = SubscriptionPlan("SILVER", BigDecimal(9.90), 3, BigDecimal(0.15))
     gamerCamila.rentalGame(gameResidentVillage, rentalPeriod1)
     gamerCamila.rentalGame(gameSpiderMan, rentalPeriod2)
     gamerCamila.rentalGame(gameTheLastOfUs, rentalPeriod3)
@@ -84,5 +85,5 @@ fun main() {
 
     val file = File("recommendedGames-${gamerCamila.name}.json")
     file.writeText(serialization)
-    println(file.absolutePath)
+//    println(file.absolutePath)
 }
