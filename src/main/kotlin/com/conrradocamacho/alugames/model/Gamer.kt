@@ -1,5 +1,6 @@
 package com.conrradocamacho.alugames.model
 
+import java.math.RoundingMode
 import java.time.LocalDate
 import java.time.Month
 import java.util.Scanner
@@ -20,6 +21,7 @@ data class Gamer(var name: String, var email: String): Recommendable {
     val gamesSearched = mutableListOf<Game?>()
     val rentedGames = mutableListOf<Rental>()
     private val gradeList = mutableListOf<Int>()
+    val recommendedGames = mutableListOf<Game>()
 
     override val average: Double
         get() = gradeList.average()
@@ -30,6 +32,11 @@ data class Gamer(var name: String, var email: String): Recommendable {
         } else {
             println("The grade value $grade not added, the value needed between 1 and 10")
         }
+    }
+
+    fun recommendGame(game: Game, grade: Int) {
+        game.recommend(grade)
+        recommendedGames.add(game)
     }
 
     constructor(name: String, email: String, birthday: String, user: String):
@@ -53,7 +60,7 @@ data class Gamer(var name: String, var email: String): Recommendable {
                 "Birthday: $birthday\n" +
                 "User: $user\n" +
                 "InternalId: $internalId\n" +
-                "Reputation: $average"
+                "Reputation: ${average.toBigDecimal().setScale(2, RoundingMode.UP)}"
     }
 
     private fun createInternalId() {
