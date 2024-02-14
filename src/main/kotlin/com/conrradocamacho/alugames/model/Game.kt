@@ -7,6 +7,7 @@ import java.math.RoundingMode
 data class Game(@Expose val title: String,
            @Expose val thumb: String): Recommendable {
     var price: BigDecimal = BigDecimal.ZERO
+    var id = 0
     var description: String? = null
     private val gradeList = mutableListOf<Int>()
 
@@ -17,19 +18,21 @@ data class Game(@Expose val title: String,
         gradeList.add(grade)
     }
 
-    constructor(title: String, thumb: String, price: BigDecimal, description: String):
+    constructor(title: String, thumb: String, price: BigDecimal, description: String, id: Int = 0):
             this(title, thumb) {
                 this.price = price
                 this.description = description
+                this.id = 0
             }
 
     override fun toString(): String {
         val formattedPrice = "${price.setScale(2, RoundingMode.UP)}".replace(".", ",")
-        return "Game:" +
-                "\nTitle: $title" +
-                "\nThumb: $thumb" +
-                "\nPrice: R$ $formattedPrice" +
-                "\nDescription: $description" +
-                "\nReputation: ${average.setScale(2, RoundingMode.UP)}"
+        return "Game:\n" +
+                "Title: $title\n" +
+                "Thumb: $thumb\n" +
+                "Price: R$ $formattedPrice\n" +
+                "Description: $description\n" +
+                "Reputation: ${average.setScale(2, RoundingMode.UP)}\n" +
+                "Id: $id\n"
     }
 }

@@ -6,7 +6,8 @@ class SubscriptionPlan(
     type: String,
     val monthlyPayment: BigDecimal,
     val gamesIncluded: Int,
-    val reputationDiscountPercentage: BigDecimal): Plan(type) {
+    val reputationDiscountPercentage: BigDecimal,
+    id: Int = 0): Plan(type, id) {
 
     override fun getPrice(rental: Rental): BigDecimal {
         val totalGamesInTheMonth = rental.gamer.getRentedGameListByMonth(rental.rentalPeriod.initialDate.month).size + 1
@@ -23,4 +24,12 @@ class SubscriptionPlan(
         }
     }
 
+    override fun toString(): String {
+        return "SubscriptionPlan\n" +
+                "Type: $type\n" +
+                "Id: $id\n" +
+                "MonthlyPayment: $monthlyPayment\n" +
+                "GamesIncluded: $gamesIncluded\n" +
+                "ReputationDiscountPercentage: $reputationDiscountPercentage\n"
+    }
 }
