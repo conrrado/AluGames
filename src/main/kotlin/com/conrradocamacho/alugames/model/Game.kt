@@ -3,6 +3,7 @@ package com.conrradocamacho.alugames.model
 import com.google.gson.annotations.Expose
 import java.math.BigDecimal
 import java.math.RoundingMode
+import javax.persistence.*
 
 data class Game(@Expose val title: String,
            @Expose val thumb: String): Recommendable {
@@ -18,7 +19,7 @@ data class Game(@Expose val title: String,
         gradeList.add(grade)
     }
 
-    constructor(title: String, thumb: String, price: BigDecimal, description: String, id: Int = 0):
+    constructor(title: String, thumb: String, price: BigDecimal, description: String?, id: Int = 0):
             this(title, thumb) {
                 this.price = price
                 this.description = description
