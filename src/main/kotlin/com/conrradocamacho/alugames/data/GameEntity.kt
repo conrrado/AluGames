@@ -17,5 +17,6 @@ class GameEntity(
     @Column(name = "descricao")
     val description: String? = null,
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0) {}

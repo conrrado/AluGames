@@ -31,7 +31,9 @@ CREATE TABLE gamer (
             nome VARCHAR(255),
             email VARCHAR(255),
             aniversario VARCHAR(16),
-            usuario VARCHAR(64))]]></console>
+            usuario VARCHAR(64))
+
+select * from jogos]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

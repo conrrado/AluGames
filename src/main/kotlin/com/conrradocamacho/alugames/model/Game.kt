@@ -23,7 +23,7 @@ data class Game(@Expose val title: String,
             this(title, thumb) {
                 this.price = price
                 this.description = description
-                this.id = 0
+                this.id = id
             }
 
     override fun toString(): String {

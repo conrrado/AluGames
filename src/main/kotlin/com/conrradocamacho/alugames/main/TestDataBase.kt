@@ -6,8 +6,16 @@ import com.conrradocamacho.alugames.data.GamerDAO
 import com.conrradocamacho.alugames.model.Game
 import com.conrradocamacho.alugames.model.Gamer
 import java.math.BigDecimal
+import javax.persistence.EntityManager
 
 fun main() {
+    val manager = Database.getEntityManager()
+    testGame(manager)
+    testGamer(manager)
+    manager.close()
+}
+
+fun testGame(manager: EntityManager) {
     val game = Game("The Last of Us Part I",
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg?t=1686864554",
         BigDecimal(5.99),
@@ -17,21 +25,20 @@ fun main() {
         BigDecimal(9.99),
         "Um jogo de plataforma e ação com elementos de metroidvania, onde você controla a heroína Dandara em sua luta para libertar um mundo repleto de opressão e tirania.")
 
-    val manager = Database.getEntityManager()
     val gameDAO = GameDAO(manager)
-//    gameDAO.addGame(game)
+//    gameDAO.add(game)
 
-    val gameList: List<Game> = gameDAO.getGames()
+    val gameList = gameDAO.getList()
     println("\n=============== Games ===============\n")
     println(gameList)
+}
 
+fun testGamer(manager: EntityManager) {
     val gamer1 = Gamer("Maria", "maria@email.com", "10/10/1990", "ursinho")
     val gamerDAO = GamerDAO(manager)
-//    gamerDAO.addGamer(gamer1)
+//    gamerDAO.add(gamer1)
 
-    val gamerList = gamerDAO.getGamers()
+    val gamerList = gamerDAO.getList()
     println("\n=============== Gamers ===============\n")
     println(gamerList)
-
-    manager.close()
 }
