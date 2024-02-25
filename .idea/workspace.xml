@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Refactoring DAO classes&#10;&#10;- Create DAO class with generic types&#10;- Refactoring GameDAO class to extend DAO and implements abstracts functions&#10;- Refactoring GamerDAO class to extend DAO and implements abstracts functions">
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestPlanDatabase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/DAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestDataBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestDataBase.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +18,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -48,6 +49,7 @@
     "Kotlin.TestDataBaseKt.executor": "Run",
     "Kotlin.TestGamerKt.executor": "Run",
     "Kotlin.TestJsonKt.executor": "Run",
+    "Kotlin.TestPlanDatabaseKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -168,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708889677246</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class">
+      <option name="closed" value="true" />
+      <created>1708893032117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708893032117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -179,6 +189,7 @@
     <MESSAGE value="Refactoring addGame function&#10;&#10;- Refactoring addGame function to suit Hibernate usage" />
     <MESSAGE value="Add Gamer to database&#10;&#10;- Create GamerDAO class&#10;- Create GamerEntity class&#10;- Create addGamer and getGamers functions" />
     <MESSAGE value="Refactoring DAO classes&#10;&#10;- Create DAO class with generic types&#10;- Refactoring GameDAO class to extend DAO and implements abstracts functions&#10;- Refactoring GamerDAO class to extend DAO and implements abstracts functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring DAO classes&#10;&#10;- Create DAO class with generic types&#10;- Refactoring GameDAO class to extend DAO and implements abstracts functions&#10;- Refactoring GamerDAO class to extend DAO and implements abstracts functions" />
+    <MESSAGE value="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class" />
   </component>
 </project>
