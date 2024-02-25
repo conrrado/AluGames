@@ -28,9 +28,22 @@ fun testGame(manager: EntityManager) {
     val gameDAO = GameDAO(manager)
 //    gameDAO.add(game)
 
+//    val gameFromDatabase = gameDAO.getById(3)
+//    println("\n Game from database:\n$gameFromDatabase")
+
+//    gameDAO.delete(3)
+
     val gameList = gameDAO.getList()
     println("\n=============== Games ===============\n")
     println(gameList)
+
+    val lastGame = gameList.last()
+    lastGame.price = BigDecimal(52.0)
+    gameDAO.alter(lastGame)
+
+    val lastGameFromDatabase = gameDAO.getById(lastGame.id)
+    println("\n Last Game from database:\n$lastGameFromDatabase")
+
 }
 
 fun testGamer(manager: EntityManager) {
@@ -38,7 +51,20 @@ fun testGamer(manager: EntityManager) {
     val gamerDAO = GamerDAO(manager)
 //    gamerDAO.add(gamer1)
 
+//    val gamerFromDatabase = gamerDAO.getById(4)
+//    println("\n Gamer from database:\n$gamerFromDatabase")
+
+//    gamerDAO.delete(4)
+
     val gamerList = gamerDAO.getList()
     println("\n=============== Gamers ===============\n")
     println(gamerList)
+
+    val lastGamer = gamerList.last()
+    lastGamer.email = "${lastGamer.name}123@test.com"
+    gamerDAO.alter(lastGamer)
+
+    val lastGamerFromDatabase = gamerDAO.getById(lastGamer.id)
+    println("\n Last Gamer from database:\n$lastGamerFromDatabase")
+
 }
