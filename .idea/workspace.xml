@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Save in Json and refactoring in printing&#10;&#10;- Create json file with specific fields from Game class&#10;- Print refactoring to show friendly data">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Refactoring addGame function&#10;&#10;- Refactoring addGame function to suit Hibernate usage">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameEntity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestDataBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestDataBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/script.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +24,8 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -98,9 +95,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.TestGamerKt" />
         <item itemvalue="Kotlin.TestJsonKt" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Kotlin.TestGamerKt" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707834227814</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactoring addGame function&#10;&#10;- Refactoring addGame function to suit Hibernate usage">
+      <option name="closed" value="true" />
+      <created>1708881879733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708881879733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,6 +165,7 @@
     <MESSAGE value="Add Plan functionality&#10;&#10;- Create Plan sealed class&#10;- Create SinglePlan class&#10;- Create SubscriptionPlan class&#10;- Create function to get price for each game&#10;- Create function to validate price according to plan of the user" />
     <MESSAGE value="Add Recommendation functionality&#10;&#10;- Create Recommendable interface&#10;- Implementation of getPrice method on SinglePlan&#10;- Change getPrice method of SubscriptionPlan to consider reputation of gamer&#10;- Create function to recommend a gamer" />
     <MESSAGE value="Save in Json and refactoring in printing&#10;&#10;- Create json file with specific fields from Game class&#10;- Print refactoring to show friendly data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save in Json and refactoring in printing&#10;&#10;- Create json file with specific fields from Game class&#10;- Print refactoring to show friendly data" />
+    <MESSAGE value="Refactoring addGame function&#10;&#10;- Refactoring addGame function to suit Hibernate usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring addGame function&#10;&#10;- Refactoring addGame function to suit Hibernate usage" />
   </component>
 </project>

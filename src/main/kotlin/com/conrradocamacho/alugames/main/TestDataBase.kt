@@ -2,7 +2,9 @@ package com.conrradocamacho.alugames.main
 
 import com.conrradocamacho.alugames.data.Database
 import com.conrradocamacho.alugames.data.GameDAO
+import com.conrradocamacho.alugames.data.GamerDAO
 import com.conrradocamacho.alugames.model.Game
+import com.conrradocamacho.alugames.model.Gamer
 import java.math.BigDecimal
 
 fun main() {
@@ -17,10 +19,19 @@ fun main() {
 
     val manager = Database.getEntityManager()
     val gameDAO = GameDAO(manager)
-    gameDAO.addGame(game)
+//    gameDAO.addGame(game)
 
     val gameList: List<Game> = gameDAO.getGames()
+    println("\n=============== Games ===============\n")
     println(gameList)
+
+    val gamer1 = Gamer("Maria", "maria@email.com", "10/10/1990", "ursinho")
+    val gamerDAO = GamerDAO(manager)
+//    gamerDAO.addGamer(gamer1)
+
+    val gamerList = gamerDAO.getGamers()
+    println("\n=============== Gamers ===============\n")
+    println(gamerList)
 
     manager.close()
 }
