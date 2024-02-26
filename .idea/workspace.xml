@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestPlanDatabase.kt" afterDir="false" />
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Add Plan to database and DAO classes&#10;&#10;- Create PlanDao and implement mandatory methods of the DAO class&#10;- Create PlanEntity that contains columns and hierarchy from your classes&#10;- Create TestPlanDatabase.kt to test the interactions between Plan and database">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestGamerDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/PlanExtension.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/PlanEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/Gamer.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +52,7 @@
   "keyToString": {
     "Kotlin.MainKt.executor": "Run",
     "Kotlin.TestDataBaseKt.executor": "Run",
+    "Kotlin.TestGamerDatabaseKt.executor": "Run",
     "Kotlin.TestGamerKt.executor": "Run",
     "Kotlin.TestJsonKt.executor": "Run",
     "Kotlin.TestPlanDatabaseKt.executor": "Run",
@@ -178,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708893032117</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Plan to database and DAO classes&#10;&#10;- Create PlanDao and implement mandatory methods of the DAO class&#10;- Create PlanEntity that contains columns and hierarchy from your classes&#10;- Create TestPlanDatabase.kt to test the interactions between Plan and database">
+      <option name="closed" value="true" />
+      <created>1708897773381</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708897773381</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -190,6 +204,7 @@
     <MESSAGE value="Add Gamer to database&#10;&#10;- Create GamerDAO class&#10;- Create GamerEntity class&#10;- Create addGamer and getGamers functions" />
     <MESSAGE value="Refactoring DAO classes&#10;&#10;- Create DAO class with generic types&#10;- Refactoring GameDAO class to extend DAO and implements abstracts functions&#10;- Refactoring GamerDAO class to extend DAO and implements abstracts functions" />
     <MESSAGE value="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class" />
+    <MESSAGE value="Add Plan to database and DAO classes&#10;&#10;- Create PlanDao and implement mandatory methods of the DAO class&#10;- Create PlanEntity that contains columns and hierarchy from your classes&#10;- Create TestPlanDatabase.kt to test the interactions between Plan and database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Plan to database and DAO classes&#10;&#10;- Create PlanDao and implement mandatory methods of the DAO class&#10;- Create PlanEntity that contains columns and hierarchy from your classes&#10;- Create TestPlanDatabase.kt to test the interactions between Plan and database" />
   </component>
 </project>

@@ -64,7 +64,8 @@ data class Gamer(var name: String, var email: String): Recommendable {
                 "User: $user\n" +
                 "InternalId: $internalId\n" +
                 "Reputation: ${average.setScale(2, RoundingMode.UP)}\n" +
-                "Id: $id\n"
+                "Id: $id\n" +
+                "Plan: ${plan.type}\n"
     }
 
     private fun createInternalId() {

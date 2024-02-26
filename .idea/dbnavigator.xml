@@ -33,7 +33,9 @@ CREATE TABLE gamer (
             aniversario VARCHAR(16),
             usuario VARCHAR(64))
 
-select * from jogos]]></console>
+select * from gamer
+
+delete from gamer]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -44,6 +46,13 @@ select * from jogos]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="bc3c605b-c45c-499c-ac24-b733f1a6e55f" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bc3c605b-c45c-499c-ac24-b733f1a6e55f" dataset="alugames.gamer" active-filter-id="13013d1c-9cbe-4eee-9cd1-3843412fbc5c">
+      <filter id="13013d1c-9cbe-4eee-9cd1-3843412fbc5c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
