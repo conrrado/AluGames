@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Refactoring Gamer to relate to Plan&#10;&#10;- Add a new column in GamerEntity to relate with Plan&#10;- Using @ManyToOne annotation to do the relationship&#10;- Create PlanExtension file&#10;- Create TestGamerDatabase to test interactions between Gamer and database">
+    <list default="true" id="51233962-bcaa-4ccc-8f98-228824b2bbef" name="Changes" comment="Refactoring Game and Gamer DAO&#10;&#10;- Add toModel and toEntity functions to extension file for each class&#10;- Refactoring the Game and Gamer DAO classes to suit these functions">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/RentalDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/RentalEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/main/TestRentalDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GameDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/data/GamerDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GameExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GameExtension.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GamerExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/util/GamerExtension.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/RentalPeriod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/conrradocamacho/alugames/model/RentalPeriod.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     "Kotlin.TestGamerKt.executor": "Run",
     "Kotlin.TestJsonKt.executor": "Run",
     "Kotlin.TestPlanDatabaseKt.executor": "Run",
+    "Kotlin.TestRentalDatabaseKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -94,9 +96,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.TestGamerKt" />
         <item itemvalue="Kotlin.TestJsonKt" />
-        <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708909120515</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactoring Game and Gamer DAO&#10;&#10;- Add toModel and toEntity functions to extension file for each class&#10;- Refactoring the Game and Gamer DAO classes to suit these functions">
+      <option name="closed" value="true" />
+      <created>1708910323624</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708910323624</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -210,6 +220,7 @@
     <MESSAGE value="Add new functions do DAO class&#10;&#10;- Create getById, delete and alter functions in DAO class" />
     <MESSAGE value="Add Plan to database and DAO classes&#10;&#10;- Create PlanDao and implement mandatory methods of the DAO class&#10;- Create PlanEntity that contains columns and hierarchy from your classes&#10;- Create TestPlanDatabase.kt to test the interactions between Plan and database" />
     <MESSAGE value="Refactoring Gamer to relate to Plan&#10;&#10;- Add a new column in GamerEntity to relate with Plan&#10;- Using @ManyToOne annotation to do the relationship&#10;- Create PlanExtension file&#10;- Create TestGamerDatabase to test interactions between Gamer and database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Gamer to relate to Plan&#10;&#10;- Add a new column in GamerEntity to relate with Plan&#10;- Using @ManyToOne annotation to do the relationship&#10;- Create PlanExtension file&#10;- Create TestGamerDatabase to test interactions between Gamer and database" />
+    <MESSAGE value="Refactoring Game and Gamer DAO&#10;&#10;- Add toModel and toEntity functions to extension file for each class&#10;- Refactoring the Game and Gamer DAO classes to suit these functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Game and Gamer DAO&#10;&#10;- Add toModel and toEntity functions to extension file for each class&#10;- Refactoring the Game and Gamer DAO classes to suit these functions" />
   </component>
 </project>
